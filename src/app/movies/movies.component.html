@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <h1>Movies</h1>
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-danger" (click)="onAddMovie()">{{ addOrCancel }} Movie</button>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngIf="newMovie">
+      <form [formGroup]="movieForm" (ngSubmit)="onSubmitMovie()">
+        <div class="card" >
+          <div class="card-body">
+            <div class="card-title">
+              <input formControlName="title" class="form-control" type="text" name="title" id="title" placeholder="Title...">
+            </div>
+            <hr>
+            <div class="card-body">
+              <input formControlName="director" class="form-control" type="text" name="director" id="director" placeholder="Director...">
+              <input formControlName="year" class="form-control" type="text" name="year" id="year" placeholder="Year...">
+              <input formControlName="income" class="form-control" type="text" name="income" id="income" placeholder="Gross Income...">
+              <input formControlName="duration" class="form-control" type="text" name="duration" id="duration" placeholder="Duration(minutes)...">
+              <div class="form-group">
+                <label for="">Parental Rating</label>
+                <select class="form-select form-select-sm" id="parental_rating" formControlName="parental_rating" >
+                  <option value="" disabled selected>Parental Rating</option>
+                  <option value="G">G</option>
+                  <option value="PG">PG</option>
+                  <option value="PG-13">PG-13</option>
+                  <option value="R">R</option>
+                </select>
+              </div>
+              <button type="submit" class="btn" style="padding: 0; margin: 0; width: 100%;text-align: right;">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-4" *ngFor="let movie of movies; let i = index">
+      <div class="card" >
+        <div class="card-body">
+          <div class="card-title">
+            <h4>{{ movie.title | titlecase }}</h4>
+          </div>
+          <hr>
+          <div class="card-body">
+            <p>Director: <br>{{ movie.director }}</p>
+            <p>Year: {{ movie.year }}</p>
+            <p>Gross Income: <br>{{ movie.total_gross | currency }}</p>
+            <p>Duration: {{ movie.duration }} minutes</p>
+            <p>Rated {{ movie.parental_rating }}</p>
+            <!-- <p>Cast: {{ movie.cast }}</p>
+            <p>{{ movie.description }}</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
