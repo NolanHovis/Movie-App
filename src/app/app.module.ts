@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { MoviesComponent } from './movies/movies.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    MoviesComponent
+    MoviesComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
