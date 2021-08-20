@@ -1,8 +1,6 @@
-import { Component } from "@angular/core";
-import { NgForm } from "@angular/forms";
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from "@angular/router";
-import { Observable } from "rxjs";
+
 
 @Component
 ({
@@ -11,7 +9,18 @@ import { Observable } from "rxjs";
   styleUrls: ['./auth.component.scss']
 })
 
-export class AuthComponent {
+export class AuthComponent implements OnInit {
   userForm: FormGroup;
 
+  ngOnInit() {
+    this.initForm()
+  }
+
+  onSubmit() {
+
+  }
+
+  private initForm() {
+
+  }
 }

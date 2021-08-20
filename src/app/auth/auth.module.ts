@@ -8,9 +8,11 @@ import { AuthComponent } from "./auth.component";
     declarations: [AuthComponent],
     imports: [
         CommonModule,
+        RouterModule.forChild([{ path: '', component: AuthComponent }]),
         FormsModule,
-        ReactiveFormsModule,
-        RouterModule.forChild([{ path: '', component: AuthComponent }])
+        ReactiveFormsModule
     ]
 })
-export class AuthModule {}
+export class AuthModule {
+
+}
