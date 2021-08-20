@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Sign Up</h1>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="userForm" >
+        <div class="form-group">
+          <input type="email" formControlName="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="first_name" class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="last_name" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <input type="text" formControlName="nickname" class="form-control" placeholder="Nickname">
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <input type="password" formControlName="password_confirmation" class="form-control" placeholder="Password Confirmation">
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+</div>
