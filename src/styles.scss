@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
 body {
   background-color: #8d99ae !important;
 }
@@ -17,7 +19,6 @@ button {
 }
 
 .card {
-  cursor: pointer;
   background-color: #d90429 !important;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.615);
 }
